@@ -12,11 +12,9 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 //routes
-//app.use('/', require('./routes/index'));
+app.use('/', require('./routes/index'));
 app.use('/users', require('./routes/users'));
-app.get('/', (req, res) =>{
-    res.render('home');
-});
+
 
 //let PORT = process.env.PORT || 3000;
 
