@@ -6,7 +6,8 @@ let expressLayouts = require('express-ejs-layouts');
 let app = express();
 
 //EJS
-app.use(expressLayouts);
+//app.use(expressLayouts);
+app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
